@@ -1,150 +1,95 @@
-:root{
-    --negro-carbon:#1C1C1C;
-    --azul-indigo:#264653;
-    --rojo-carmesi:#D72638;
-    --rosa-sakura:#FADADD;
+:root {
+    --negro-carbon: #1C1C1C;
+    --azul-indigo: #264653;
+    --rojo-carmesi: #D72638;
+    --rosa-sakura: #FADADD;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--rosa-sakura);
 }
 
-.sticky {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: white; /* Puedes cambiar esto */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-
-/*Encabezado con Cuenta, logo y reserva*/
-.encabezado{
-    margin: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-}
-
-
-.cuenta a{
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.cuenta a i{
-    margin-right: 4px;
-}
-
-.cuenta a:hover{
-    color:var(--azul-indigo);
-}
-
-.logo img{
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.reserva a{
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.reserva a i{
-    margin-left: 4px;
-}
-
-.reserva a:hover{
-    color:var(--azul-indigo);
-}
-
-/* banner aguas terminaes y texto debajo*/
-.PrimerBanner{
-    display: flex;
-    flex-direction: column;
-}
-
-.banner1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.textoBanner1{
-    display: flex;
-    background-color:var(--azul-indigo);
-    margin: 0 auto;
-    height: 200px;
-    width: 800px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.textoBanner1 h3{
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-}
-
-.textoBanner1 h2{
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    font-weight: normal;
-    margin: 10px;
-}
-
-.textoBanner1 h3,
-.textoBanner1 h2{
-    margin: 10px 0;
-}
-
-/* From Uiverse.io by alexroumi */ 
-button {
-    padding: 15px 25px;
-    border: unset;
-    border-radius: 15px;
-    color: #212121;
-    z-index: 1;
-    background: #e8e8e8;
-    position: relative;
-    font-weight: 1000;
-    font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms;
-    overflow: hidden;
-}
-
-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
     left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #212121;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms
-}
-
-button:hover {
-    color: #e8e8e8;
-}
-
-button:hover::before {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 1000;
+}
+
+.encabezado .logo {
+    position: relative;
+    color: var(--negro-carbon);
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 1.5s;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado ul li {
+    list-style: none;
+}
+
+.encabezado ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--negro-carbon);
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+.contenedor-fondo{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../Img/fondo.jpg) no-repeat center;
+    background-size: cover ;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.contendor-glass{
+    width: 45rem;
+    height: 30rem;
+    border: 3px solid #fafafa10;
+    border-radius: 1rem;
+    margin: 60px;
+    align-items: left;
+}
+
+
+.efecto-glass{
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);/* para que funcione en la mayoria de navegadores*/
 }
